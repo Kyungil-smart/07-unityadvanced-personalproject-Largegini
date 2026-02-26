@@ -1,1 +1,45 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=22871672&assignment_repo_type=AssignmentRepo)
+게임 코어 기능
+1. 노트관리
+    - 노트 생성(0226)
+      - 노트 종류
+        - 몬스터
+        - 탄환
+        - 레이저?(꾹누르기)
+
+2. 플레이어
+    - 체력
+    - 행동
+      - 공격   (z)
+      - 쳐내기 (x)
+
+3. 노트 판정 알고리즘
+   - 피격
+     - perfect, great, good, miss
+   - 플레이어 공격
+
+4. 콤보
+   - 피버
+     - 속도 증가
+
+5. 맵
+   - 횡 스크롤(0226)
+   - 배경 장식 생성
+
+6. 게임 클리어
+   - 맵 길이 생성
+    - 끝 도달 시 클리어
+  
+
+확장 기능
+1. 카메라 연출
+2. 타이틀
+3. 스테이지 추가
+   - 스테이지 선택 메뉴
+4. 채보(노트) 에디터
+5. 플레이어 공격력, 방어력 구현
+6. 상점, 업그레이드 구현
+7. 몬스터 노트 체력, 탄환 공격력
+   - 몬스터 체력이 남으면 뒤로 밀림
+   - 탄환 공격력이 방어력 보다 높으면 막아도 체력 감소(방어력 - 탄환 공격력)
+8. 노트 줄 추가
+9. 입력 레이턴시 보정
