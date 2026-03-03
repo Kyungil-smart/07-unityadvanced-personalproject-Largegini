@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
 
-public class NoteMovement : MonoBehaviour
+public class NoteMovement
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private float _moveSpeed;
+
+    public NoteMovement(float moveSpeed)
     {
-        
+        _moveSpeed = moveSpeed;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Move(Transform transform, Rigidbody2D rb)
     {
-        
+        rb.MovePosition(transform.position + (_moveSpeed * Time.fixedDeltaTime * Vector3.left));
     }
 }
