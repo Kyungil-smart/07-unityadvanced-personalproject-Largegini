@@ -30,10 +30,10 @@ public class BackGroundManager : MonoBehaviour
 
     private void Awake()
     {
-        _spawnOffset = new Vector3(0, 1f, 0);
+        _spawnOffset = new Vector3(0, 1.5f, 0);
         
         _treeSpawnRate = 1f;
-        _mountainSpawnRate = 2f;
+        _mountainSpawnRate = 1.5f;
         _cloudSpawnRate = 3f;
         
         _treeSpawnTimer = new Timer(_treeSpawnRate);
@@ -80,7 +80,7 @@ public class BackGroundManager : MonoBehaviour
                 _backGrounds.Enqueue(obj);
                 break;
             case BackGroundType.MOUNTAIN :
-                obj = Instantiate(mountain, spawnPoint.position + _spawnOffset, 
+                obj = Instantiate(mountain, spawnPoint.position + _spawnOffset + new Vector3(5.1f, 0, 0), 
                     spawnPoint.rotation);
                 _mountainSpawnTimer.ResetTimer(_mountainSpawnRate);
                 _backGrounds.Enqueue(obj);

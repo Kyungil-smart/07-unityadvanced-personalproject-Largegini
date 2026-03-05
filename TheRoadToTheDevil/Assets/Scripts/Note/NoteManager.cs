@@ -4,13 +4,17 @@ using Random = UnityEngine.Random;
 
 public class NoteManager : MonoBehaviour
 {
-    private static NoteManager _noteManager;
+    private static NoteManager _instance;
 
-    public static NoteManager Instance()
+    public static NoteManager Instance
     {
-        if (_noteManager == null)
-            _noteManager = new NoteManager();
-        return _noteManager;
+        get
+        {
+            if (_instance == null)
+                _instance = FindAnyObjectByType<NoteManager>();
+
+            return _instance;
+        }
     }
     
     // 생성된 노트 관리
@@ -19,7 +23,7 @@ public class NoteManager : MonoBehaviour
 
     private int _noteTypenum;
     
-    [SerializeField] public NoteSpawner _noteSpawner;
+    [SerializeField] public NoteSpawner noteSpawner;
     // 스폰 명령
 
     private void Awake()
@@ -45,7 +49,7 @@ public class NoteManager : MonoBehaviour
         // 조건
         NoteType randomType = (NoteType)Random.Range(0, _noteTypenum);
         
-        _noteSpawner.CreateNote(randomType);
+        noteSpawner.CreateNote(randomType);
         _spawnTimer.ResetTimer(_spawnRate);
     }
     // 디스폰명령
