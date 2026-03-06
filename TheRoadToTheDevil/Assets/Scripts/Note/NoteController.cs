@@ -6,6 +6,7 @@ public class NoteController : MonoBehaviour
    private NoteMovement _movement;
    private float _moveSpeed;
    private Rigidbody2D _rb;
+   public NoteType type;
 
    private void Awake()
    {

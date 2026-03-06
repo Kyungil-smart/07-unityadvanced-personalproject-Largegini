@@ -12,7 +12,7 @@ public class PAttackState : IState
 
     public void Enter()
     {
-        
+        NoteManager.Instance.noteJudge.ExecuteJudgment(_player.currentStateAnim);
     }
 
     public void Update()
@@ -23,6 +23,7 @@ public class PAttackState : IState
         if (_player.inputSystem.Player.Attack.triggered)
         {
             _player.animator.Play("Attack", 0, 0f);
+            NoteManager.Instance.noteJudge.ExecuteJudgment(_player.currentStateAnim);
             return;
         }
         // 다른 키 입력 시 전환

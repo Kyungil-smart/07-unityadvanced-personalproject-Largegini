@@ -6,6 +6,8 @@ public class NoteManager : MonoBehaviour
 {
     private static NoteManager _instance;
 
+    public NoteJudge noteJudge;
+
     public static NoteManager Instance
     {
         get
@@ -54,8 +56,8 @@ public class NoteManager : MonoBehaviour
     }
     // 디스폰명령
 
-    public void DestroyNote()
+    public void DestroyNote(GameObject target)
     {
-        
+        Destroy(target);
     }
 }

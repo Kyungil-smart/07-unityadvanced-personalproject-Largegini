@@ -6,6 +6,8 @@ public class NoteSpawner : MonoBehaviour
    public void CreateNote(NoteType noteType)
    {
        GameObject obj = Instantiate(Resources.Load<GameObject>(noteType.ToString()), transform);
+       obj.GetComponent<NoteController>().type = noteType;
+       
        if (noteType == NoteType.Lazer)
        {
            // 노트길이 받아와 생성

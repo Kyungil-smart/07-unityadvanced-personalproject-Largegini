@@ -12,6 +12,7 @@ public class PParryState : IState
     
     public void Enter()
     {
+        NoteManager.Instance.noteJudge.ExecuteJudgment(_player.currentStateAnim);
     }
 
     public void Update()
@@ -21,6 +22,7 @@ public class PParryState : IState
         if (_player.inputSystem.Player.Parry.triggered)
         {
             _player.animator.Play("Parry", 0, 0);
+            NoteManager.Instance.noteJudge.ExecuteJudgment(_player.currentStateAnim);
             return;
         }
 

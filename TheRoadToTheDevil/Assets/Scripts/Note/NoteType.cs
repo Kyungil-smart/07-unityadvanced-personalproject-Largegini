@@ -2,5 +2,5 @@ using UnityEngine;
 
 public enum NoteType
 {
-    Monster, Bullet, Lazer
+    Monster = 1, Bullet, Lazer
 }
